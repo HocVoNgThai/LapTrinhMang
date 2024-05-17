@@ -1,0 +1,12 @@
+D:\mạng\btvn\btvn_bai1\btvn_bai1\bin\Debug\btvn_bai1.exe.config
+D:\mạng\btvn\btvn_bai1\btvn_bai1\bin\Debug\btvn_bai1.exe
+D:\mạng\btvn\btvn_bai1\btvn_bai1\bin\Debug\btvn_bai1.pdb
+D:\mạng\btvn\btvn_bai1\btvn_bai1\obj\Debug\btvn_bai1.csproj.AssemblyReference.cache
+D:\mạng\btvn\btvn_bai1\btvn_bai1\obj\Debug\btvn_bai1.Form1.resources
+D:\mạng\btvn\btvn_bai1\btvn_bai1\obj\Debug\btvn_bai1.Properties.Resources.resources
+D:\mạng\btvn\btvn_bai1\btvn_bai1\obj\Debug\btvn_bai1.Server.resources
+D:\mạng\btvn\btvn_bai1\btvn_bai1\obj\Debug\btvn_bai1.csproj.GenerateResource.cache
+D:\mạng\btvn\btvn_bai1\btvn_bai1\obj\Debug\btvn_bai1.csproj.CoreCompileInputs.cache
+D:\mạng\btvn\btvn_bai1\btvn_bai1\obj\Debug\btvn_bai1.exe
+D:\mạng\btvn\btvn_bai1\btvn_bai1\obj\Debug\btvn_bai1.pdb
+D:\mạng\btvn\btvn_bai1\btvn_bai1\obj\Debug\btvn_bai1.Client.resources
