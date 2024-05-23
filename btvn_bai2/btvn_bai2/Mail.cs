@@ -9,15 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MailKit.Net.Pop3;
 using MailKit.Net.Smtp;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace btvn_bai2
 {
     public partial class Mail : Form
     {
         private string receivedPassword;
+        private Pop3Client Client;
         public Mail(Pop3Client client, string account, string password)
         {
             InitializeComponent();
+            Client = client;
             txtAccount.Text = account;
             var limit = client.GetMessageCount();
             for (int i = limit - 1; i >= 0; i--)
@@ -32,7 +35,20 @@ namespace btvn_bai2
                 receivedPassword = password;
             }
         }
+        private void listView_MouseClick(object sender, MouseEventArgs e)
+        {
+            // Lấy thông tin về mục được nhấp chuột
+            ListViewHitTestInfo hitInfo = lstMail.HitTest(e.Location);
 
+            // Kiểm tra xem có nhấp chuột vào subitem hay không
+            if (hitInfo.SubItem != null)
+            {
+                // Lấy giá trị của subitem
+                string subItemValue = hitInfo.SubItem.Text;
+                var message = Client.GetMessage(int.Parse(subItemValue));
+               
+            }
+        }
         private void btnSend_Click(object sender, EventArgs e)
         {
             try
@@ -40,7 +56,7 @@ namespace btvn_bai2
                 SendMail sendMail = new SendMail(txtAccount.Text, receivedPassword);
                 sendMail.ShowDialog();
             }
-            catch 
+            catch
             {
                 MessageBox.Show("Lỗi kết nối!");
                 return;

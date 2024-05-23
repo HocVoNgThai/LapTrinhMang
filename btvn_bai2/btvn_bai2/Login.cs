@@ -33,6 +33,7 @@ namespace btvn_bai2
                 Mail mail = new Mail(client, txtAccount.Text, txtPass.Text);
                 this.Hide();
                 mail.ShowDialog();
+                this.Close();
 
             }
             catch

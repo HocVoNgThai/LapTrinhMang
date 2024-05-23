@@ -50,3 +50,4 @@ D:\mạng\btvn\btvn_bai2\btvn_bai2\obj\Debug\net7.0-windows\refint\btvn_bai2.dll
 D:\mạng\btvn\btvn_bai2\btvn_bai2\obj\Debug\net7.0-windows\btvn_bai2.pdb
 D:\mạng\btvn\btvn_bai2\btvn_bai2\obj\Debug\net7.0-windows\btvn_bai2.genruntimeconfig.cache
 D:\mạng\btvn\btvn_bai2\btvn_bai2\obj\Debug\net7.0-windows\ref\btvn_bai2.dll
+D:\mạng\btvn\btvn_bai2\btvn_bai2\obj\Debug\net7.0-windows\btvn_bai2.Form2.resources

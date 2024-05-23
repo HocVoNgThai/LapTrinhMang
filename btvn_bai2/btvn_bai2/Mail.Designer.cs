@@ -46,11 +46,11 @@
             lstMail.Location = new Point(0, 170);
             lstMail.Margin = new Padding(4, 3, 4, 3);
             lstMail.Name = "lstMail";
-            lstMail.Scrollable = false;
             lstMail.Size = new Size(1100, 499);
             lstMail.TabIndex = 0;
             lstMail.UseCompatibleStateImageBehavior = false;
             lstMail.View = View.Details;
+            lstMail.MouseDoubleClick += listView_MouseClick;
             // 
             // Number
             // 
