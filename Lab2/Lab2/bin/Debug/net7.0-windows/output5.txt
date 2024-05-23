@@ -1,0 +1,34 @@
+[
+  {
+    "TenPhim": "\u0110\u00E0o, ph\u1EDF v\u00E0 piano",
+    "VeBanRa": 10,
+    "VeConLai": 35,
+    "TileBan": 22.22222222222222,
+    "DoanhThu": 551250,
+    "XepHang": 1
+  },
+  {
+    "TenPhim": "Mai",
+    "VeBanRa": 0,
+    "VeConLai": 30,
+    "TileBan": 0,
+    "DoanhThu": 0,
+    "XepHang": 4
+  },
+  {
+    "TenPhim": "Tarrot",
+    "VeBanRa": 0,
+    "VeConLai": 15,
+    "TileBan": 0,
+    "DoanhThu": 0,
+    "XepHang": 4
+  },
+  {
+    "TenPhim": "G\u1EB7p lai ch\u1ECB b\u1EA7u",
+    "VeBanRa": 0,
+    "VeConLai": 15,
+    "TileBan": 0,
+    "DoanhThu": 0,
+    "XepHang": 4
+  }
+]
