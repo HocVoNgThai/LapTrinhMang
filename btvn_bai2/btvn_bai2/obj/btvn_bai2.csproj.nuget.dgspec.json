@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\mạng\\btvn\\btvn_bai2\\btvn_bai2\\btvn_bai2.csproj": {}
+    "D:\\mạng\\LapTrinhMang-github\\btvn_bai2\\btvn_bai2\\btvn_bai2.csproj": {}
   },
   "projects": {
-    "D:\\mạng\\btvn\\btvn_bai2\\btvn_bai2\\btvn_bai2.csproj": {
+    "D:\\mạng\\LapTrinhMang-github\\btvn_bai2\\btvn_bai2\\btvn_bai2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\mạng\\btvn\\btvn_bai2\\btvn_bai2\\btvn_bai2.csproj",
+        "projectUniqueName": "D:\\mạng\\LapTrinhMang-github\\btvn_bai2\\btvn_bai2\\btvn_bai2.csproj",
         "projectName": "btvn_bai2",
-        "projectPath": "D:\\mạng\\btvn\\btvn_bai2\\btvn_bai2\\btvn_bai2.csproj",
+        "projectPath": "D:\\mạng\\LapTrinhMang-github\\btvn_bai2\\btvn_bai2\\btvn_bai2.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "D:\\mạng\\btvn\\btvn_bai2\\btvn_bai2\\obj\\",
+        "outputPath": "D:\\mạng\\LapTrinhMang-github\\btvn_bai2\\btvn_bai2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\vs studio\\shared\\NuGetPackages"
@@ -48,6 +48,10 @@
             "MailKit": {
               "target": "Package",
               "version": "[4.5.0, )"
+            },
+            "Microsoft.Web.WebView2": {
+              "target": "Package",
+              "version": "[1.0.2478.35, )"
             }
           },
           "imports": [

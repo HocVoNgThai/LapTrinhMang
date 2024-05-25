@@ -45,7 +45,11 @@ namespace btvn_bai2
             {
                 // Lấy giá trị của subitem
                 string subItemValue = hitInfo.SubItem.Text;
-                var message = Client.GetMessage(int.Parse(subItemValue));
+                var limit = Client.GetMessageCount();
+                var message = Client.GetMessage(limit - int.Parse(subItemValue));
+                string emailHtml = message.HtmlBody ?? message.TextBody ?? "No content";
+                Form2 form2 = new Form2(emailHtml);
+                form2.ShowDialog();
                
             }
         }

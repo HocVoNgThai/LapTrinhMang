@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "CCkRvZ/0mA11dsFvRyvTklfgHxKaBpH2OLuWEhc+bloJMJmO63s06HvlHF9lmVU17Sb7+L0HsPs8n20AJwmDYQ==",
+  "dgSpecHash": "FvG4XRW9Y1vQcGrEKz5AvQqtbAtLFN/G6+Wc2ROMucGwBLN0AabM6fY++xE/nmWuk2/FgSfy7ND+eA0BO8q5yQ==",
   "success": true,
-  "projectFilePath": "D:\\mạng\\btvn\\btvn_bai2\\btvn_bai2\\btvn_bai2.csproj",
+  "projectFilePath": "D:\\mạng\\LapTrinhMang-github\\btvn_bai2\\btvn_bai2\\btvn_bai2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\bouncycastle.cryptography\\2.3.0\\bouncycastle.cryptography.2.3.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\mailkit\\4.5.0\\mailkit.4.5.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.web.webview2\\1.0.2478.35\\microsoft.web.webview2.1.0.2478.35.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\mimekit\\4.5.0\\mimekit.4.5.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.formats.asn1\\8.0.0\\system.formats.asn1.8.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.0\\system.security.cryptography.pkcs.8.0.0.nupkg.sha512"
