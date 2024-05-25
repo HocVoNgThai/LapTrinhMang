@@ -1,0 +1,12 @@
+{
+  "smtp": "smtp.gmail.com",
+  "port": "465",
+  "nickname": "H\u1ECDc ",
+  "email": "accvipth86@gmail.com",
+  "password": "cqsg hfpw ahzh qijg",
+  "ssl": "True",
+  "pop": "pop.gmail.com",
+  "popport": "995",
+  "popssl": "True",
+  "loadmail": 3
+}
