@@ -78,12 +78,12 @@ namespace lab5_5
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txtEmail.Text))
+            if (string.IsNullOrEmpty(txtEmail.Text))
             {
                 MessageBox.Show("Vui lòng nhập email muốn thêm", "Warning",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-            }    
+            }
             lstEmail.Items.Add(txtEmail.Text);
             txtEmail.Clear();
         }
@@ -147,6 +147,10 @@ namespace lab5_5
             MessageBox.Show("Gửi email thành công");
         }
 
-        
+        private void KeyEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnAdd.PerformClick();
+        }
     }
 }

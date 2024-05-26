@@ -17,6 +17,7 @@ using MailKit.Net.Pop3;
 using MailKit;
 using MimeKit.Tnef;
 using Lab6;
+using System.Runtime.CompilerServices;
 
 namespace lab5_5
 {
@@ -98,12 +99,15 @@ namespace lab5_5
                 MessageBox.Show($"{ex}");
                 return;
             }
-            JObject lstDishesAll = new JObject();
-            lstDishesAll = JObject.Parse(html1);
+
+            //Load tất cả Dish từ Cộng đồng.
+            JObject lstDishesAll = JObject.Parse(html1);
             var users = lstDishesAll["data"].ToArray();
-            JObject lstDishesMy = new JObject();
-            lstDishesMy = JObject.Parse(html2);
+
+            //Load tất cả Dish từ Cá nhân.
+            JObject lstDishesMy = JObject.Parse(html2);
             var users2 = lstDishesMy["data"].ToArray();
+
             var totalAll = (string)lstDishesAll["pagination"]["total"];
             var totalMy = (string)lstDishesMy["pagination"]["total"];
 
@@ -126,130 +130,222 @@ namespace lab5_5
                 MonAn dish = new MonAn(hinhAnh, monAn, Gia, diaChi, dongGop);
                 monAns.Add(dish);
             }*/
-            lbAll_DiaChi_1.Text = lbAll_DiaChi_2.Text = lbAll_DiaChi_3.Text = lbAll_DiaChi_4.Text = lbAll_DiaChi_5.Text = lbAll_DongGop_1.Text
-                = lbAll_DongGop_2.Text = lbAll_DongGop_3.Text = lbAll_DongGop_4.Text = lbAll_DongGop_5.Text = lbAll_Gia_1.Text = lbAll_Gia_2.Text
-                = lbAll_Gia_3.Text = lbAll_Gia_4.Text = lbAll_Gia_5.Text = lbAll_Mon_1.Text = lbAll_Mon_2.Text = lbAll_Mon_3.Text = lbAll_Mon_4.Text
-                = lbAll_Mon_5.Text = lbMy_DiaChi_1.Text = lbMy_DiaChi_2.Text = lbMy_DiaChi_3.Text = lbMy_DiaChi_4.Text = lbMy_DiaChi_5.Text = lbMy_DongGop_1.Text
-                = lbMy_DongGop_2.Text = lbMy_DongGop_3.Text = lbMy_DongGop_4.Text = lbMy_DongGop_5.Text = lbMy_Gia_1.Text = lbMy_Gia_2.Text
-                = lbMy_Gia_3.Text = lbMy_Gia_4.Text = lbMy_Gia_5.Text = lbMy_Mon_1.Text = lbMy_Mon_2.Text = lbMy_Mon_3.Text = lbMy_Mon_4.Text
-                = lbMy_Mon_5.Text = pbAll1.ImageLocation = pbAll2.ImageLocation = pbAll3.ImageLocation = pbAll4.ImageLocation = pbAll5.ImageLocation
-                = pbMy1.ImageLocation = pbMy2.ImageLocation = pbMy3.ImageLocation = pbMy4.ImageLocation = pbMy5.ImageLocation = All_Gia_1.Text
-                = All_DongGop_1.Text = All_DiaChi_1.Text = All_Gia_2.Text = All_DongGop_2.Text = All_DiaChi_2.Text = All_Gia_3.Text = All_DongGop_3.Text = All_DiaChi_3.Text
-                = All_Gia_4.Text = All_DongGop_4.Text = All_DiaChi_4.Text = All_Gia_5.Text = All_DongGop_5.Text = All_DiaChi_5.Text = My_Gia_1.Text
-                = My_DongGop_1.Text = My_DiaChi_1.Text = My_Gia_2.Text = My_DongGop_2.Text = My_DiaChi_2.Text = My_Gia_3.Text = My_DongGop_3.Text = My_DiaChi_3.Text
-                = My_Gia_4.Text = My_DongGop_4.Text = My_DiaChi_4.Text = My_Gia_5.Text = My_DongGop_5.Text = My_DiaChi_5.Text = "";
+
+            //Clear Panel Controls
+            panelShowAll.Controls.Clear();
+            pnShowMy.Controls.Clear();
+
+            //Load list đã lưu trong user.
             if (users.Length > 0)
-            {
-                pbAll1.ImageLocation = (string)users[0]["hinh_anh"];
-                lbAll_Mon_1.Text = (string)users[0]["ten_mon_an"];
-                lbAll_Gia_1.Text = (string)users[0]["gia"];
-                lbAll_DiaChi_1.Text = (string)users[0]["dia_chi"];
-                lbAll_DongGop_1.Text = (string)users[0]["nguoi_dong_gop"];
-                All_Gia_1.Text = "Giá:";
-                All_DongGop_1.Text = "Người đóng góp:";
-                All_DiaChi_1.Text = "Địa chỉ:";
+                for (int i = 0; i < users.Length; i++)
+                {
+                    Label lbAll_Mon, lbAll_DongGop, lbAll_DiaChi, lbAll_Gia, All_DongGop, All_DiaChi, All_Gia;
+                    PictureBox pbAll = new PictureBox();
 
-            }
+                    // lbAll_Mon
+                    lbAll_Mon = new Label();
+                    lbAll_Mon.AutoSize = true;
+                    lbAll_Mon.Font = new Font("Cambria", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+                    lbAll_Mon.ForeColor = Color.Brown;
+                    lbAll_Mon.Location = new Point(230, 21);
+                    lbAll_Mon.Name = "lbAll_Mon_4";
+                    lbAll_Mon.Size = new Size(0, 22);
+                    lbAll_Mon.TabIndex = 14;
+                    // 
+                    // 
+                    lbAll_DongGop = new Label();
+                    lbAll_DongGop.AutoSize = true;
+                    lbAll_DongGop.Location = new Point(769, 134);
+                    lbAll_DongGop.Name = "lbAll_DongGop_4";
+                    lbAll_DongGop.Size = new Size(0, 16);
+                    lbAll_DongGop.TabIndex = 13;
+                    // 
+                    // 
+                    All_DongGop = new Label();
+                    All_DongGop.AutoSize = true;
+                    All_DongGop.Location = new Point(612, 134);
+                    All_DongGop.Name = "All_DongGop_4";
+                    All_DongGop.Size = new Size(0, 16);
+                    All_DongGop.TabIndex = 12;
+                    // 
+                    // 
+                    lbAll_Gia = new Label();
+                    lbAll_Gia.AutoSize = true;
+                    lbAll_Gia.Location = new Point(374, 87);
+                    lbAll_Gia.Name = "lbAll_Gia_4";
+                    lbAll_Gia.Size = new Size(0, 16);
+                    lbAll_Gia.TabIndex = 11;
+                    // 
+                    // 
+                    lbAll_DiaChi = new Label();
+                    lbAll_DiaChi.AutoSize = true;
+                    lbAll_DiaChi.Location = new Point(374, 134);
+                    lbAll_DiaChi.Name = "lbAll_DiaChi_4";
+                    lbAll_DiaChi.Size = new Size(0, 16);
+                    lbAll_DiaChi.TabIndex = 10;
+                    // 
+                    // 
+                    All_DiaChi = new Label();
+                    All_DiaChi.AutoSize = true;
+                    All_DiaChi.Location = new Point(230, 134);
+                    All_DiaChi.Name = "All_DiaChi_4";
+                    All_DiaChi.Size = new Size(0, 16);
+                    All_DiaChi.TabIndex = 9;
+                    // 
+                    // 
+                    All_Gia = new Label();
+                    All_Gia.AutoSize = true;
+                    All_Gia.Location = new Point(230, 87);
+                    All_Gia.Name = "All_Gia_4";
+                    All_Gia.Size = new Size(0, 16);
+                    All_Gia.TabIndex = 8;
+                    // 
+                    // 
+                    pbAll.ImageLocation = "";
+                    pbAll.Location = new Point(3, 3);
+                    pbAll.Name = "pbAll4";
+                    pbAll.Size = new Size(186, 174);
+                    pbAll.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pbAll.TabIndex = 1;
+                    pbAll.TabStop = false;
+
+                    pbAll.ImageLocation = (string)users[i]["hinh_anh"];
+                    lbAll_Mon.Text = (string)users[i]["ten_mon_an"];
+                    lbAll_Gia.Text = (string)users[i]["gia"];
+                    lbAll_DiaChi.Text = (string)users[i]["dia_chi"];
+                    lbAll_DongGop.Text = (string)users[i]["nguoi_dong_gop"];
+                    All_Gia.Text = "Giá:";
+                    All_DongGop.Text = "Người đóng góp:";
+                    All_DiaChi.Text = "Địa chỉ:";
+
+                    Panel Panel_Wrap = new Panel();
+                    Panel_Wrap.Controls.Add(lbAll_Mon);
+                    Panel_Wrap.Controls.Add(lbAll_DongGop);
+                    Panel_Wrap.Controls.Add(All_DongGop);
+                    Panel_Wrap.Controls.Add(lbAll_Gia);
+                    Panel_Wrap.Controls.Add(lbAll_DiaChi);
+                    Panel_Wrap.Controls.Add(All_DiaChi);
+                    Panel_Wrap.Controls.Add(All_Gia);
+                    Panel_Wrap.Controls.Add(pbAll);
+                    Panel_Wrap.Location = new Point(6, 6 + 180 * i);
+                    Panel_Wrap.Name = "panel5";
+                    Panel_Wrap.Size = new Size(950, 180);
+                    Panel_Wrap.TabIndex = i + 10;
+
+                    panelShowAll.Controls.Add(Panel_Wrap);
+                }
+
+
+
+            // Add vào tbpMy (user2)
+            //
+
             if (users2.Length > 0)
-            {
-                pbMy1.ImageLocation = (string)users2[0]["hinh_anh"];
-                lbMy_Mon_1.Text = (string)users2[0]["ten_mon_an"];
-                lbMy_Gia_1.Text = (string)users2[0]["gia"];
-                lbMy_DiaChi_1.Text = (string)users2[0]["dia_chi"];
-                lbMy_DongGop_1.Text = (string)users2[0]["nguoi_dong_gop"];
-                My_Gia_1.Text = "Giá:";
-                My_DongGop_1.Text = "Người đóng góp:";
-                My_DiaChi_1.Text = "Địa chỉ:";
+                for (int i = 0; i < users2.Length; i++)
+                {
+                    Label lbAll_Mon, lbAll_DongGop, lbAll_DiaChi, lbAll_Gia, All_DongGop, All_DiaChi, All_Gia;
+                    PictureBox pbAll = new PictureBox();
 
-            }
-            if (users.Length > 1)
-            {
-                pbAll2.ImageLocation = (string)users[1]["hinh_anh"];
-                lbAll_Mon_2.Text = (string)users[1]["ten_mon_an"];
-                lbAll_Gia_2.Text = (string)users[1]["gia"];
-                lbAll_DiaChi_2.Text = (string)users[1]["dia_chi"];
-                lbAll_DongGop_2.Text = (string)users[1]["nguoi_dong_gop"];
-                All_Gia_2.Text = "Giá:";
-                All_DongGop_2.Text = "Người đóng góp:";
-                All_DiaChi_2.Text = "Địa chỉ:";
-            }
-            if (users2.Length > 1)
-            {
-                pbMy2.ImageLocation = (string)users2[1]["hinh_anh"];
-                lbMy_Mon_2.Text = (string)users2[1]["ten_mon_an"];
-                lbMy_Gia_2.Text = (string)users2[1]["gia"];
-                lbMy_DiaChi_2.Text = (string)users2[1]["dia_chi"];
-                lbMy_DongGop_2.Text = (string)users2[1]["nguoi_dong_gop"];
-                My_Gia_2.Text = "Giá:";
-                My_DongGop_2.Text = "Người đóng góp:";
-                My_DiaChi_2.Text = "Địa chỉ:";
-            }
-            if (users.Length > 2)
-            {
-                pbAll3.ImageLocation = (string)users[2]["hinh_anh"];
-                lbAll_Mon_3.Text = (string)users[2]["ten_mon_an"];
-                lbAll_Gia_3.Text = (string)users[2]["gia"];
-                lbAll_DiaChi_3.Text = (string)users[2]["dia_chi"];
-                lbAll_DongGop_3.Text = (string)users[2]["nguoi_dong_gop"];
-                All_Gia_3.Text = "Giá:";
-                All_DongGop_3.Text = "Người đóng góp:";
-                All_DiaChi_3.Text = "Địa chỉ:";
-            }
-            if (users2.Length > 2)
-            {
-                pbMy3.ImageLocation = (string)users2[2]["hinh_anh"];
-                lbMy_Mon_3.Text = (string)users2[2]["ten_mon_an"];
-                lbMy_Gia_3.Text = (string)users2[2]["gia"];
-                lbMy_DiaChi_3.Text = (string)users2[2]["dia_chi"];
-                lbMy_DongGop_3.Text = (string)users2[2]["nguoi_dong_gop"];
-                My_Gia_3.Text = "Giá:";
-                My_DongGop_3.Text = "Người đóng góp:";
-                My_DiaChi_3.Text = "Địa chỉ:";
-            }
-            if (users.Length > 3)
-            {
-                pbAll4.ImageLocation = (string)users[3]["hinh_anh"];
-                lbAll_Mon_4.Text = (string)users[3]["ten_mon_an"];
-                lbAll_Gia_4.Text = (string)users[3]["gia"];
-                lbAll_DiaChi_4.Text = (string)users[3]["dia_chi"];
-                lbAll_DongGop_4.Text = (string)users[3]["nguoi_dong_gop"];
-                All_Gia_4.Text = "Giá:";
-                All_DongGop_4.Text = "Người đóng góp:";
-                All_DiaChi_4.Text = "Địa chỉ:";
-            }
-            if (users2.Length > 3)
-            {
-                pbMy4.ImageLocation = (string)users2[3]["hinh_anh"];
-                lbMy_Mon_4.Text = (string)users2[3]["ten_mon_an"];
-                lbMy_Gia_4.Text = (string)users2[3]["gia"];
-                lbMy_DiaChi_4.Text = (string)users2[3]["dia_chi"];
-                lbMy_DongGop_4.Text = (string)users2[3]["nguoi_dong_gop"];
-                My_Gia_4.Text = "Giá:";
-                My_DongGop_4.Text = "Người đóng góp:";
-                My_DiaChi_4.Text = "Địa chỉ:";
-            }
-            if (users.Length > 4)
-            {
-                pbAll5.ImageLocation = (string)users[4]["hinh_anh"];
-                lbAll_Mon_5.Text = (string)users[4]["ten_mon_an"];
-                lbAll_Gia_5.Text = (string)users[4]["gia"];
-                lbAll_DiaChi_5.Text = (string)users[4]["dia_chi"];
-                lbAll_DongGop_5.Text = (string)users[4]["nguoi_dong_gop"];
-                All_Gia_5.Text = "Giá:";
-                All_DongGop_5.Text = "Người đóng góp:";
-                All_DiaChi_5.Text = "Địa chỉ:";
-            }
-            if (users2.Length > 4)
-            {
-                pbMy5.ImageLocation = (string)users2[4]["hinh_anh"];
-                lbMy_Mon_5.Text = (string)users2[4]["ten_mon_an"];
-                lbMy_Gia_5.Text = (string)users2[4]["gia"];
-                lbMy_DiaChi_5.Text = (string)users2[4]["dia_chi"];
-                lbMy_DongGop_5.Text = (string)users2[4]["nguoi_dong_gop"];
-                My_Gia_5.Text = "Giá:";
-                My_DongGop_5.Text = "Người đóng góp:";
-                My_DiaChi_5.Text = "Địa chỉ:";
-            }
+                    // lbAll_Mon
+                    lbAll_Mon = new Label();
+                    lbAll_Mon.AutoSize = true;
+                    lbAll_Mon.Font = new Font("Cambria", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+                    lbAll_Mon.ForeColor = Color.Brown;
+                    lbAll_Mon.Location = new Point(230, 21);
+                    lbAll_Mon.Name = "lbAll_Mon_4";
+                    lbAll_Mon.Size = new Size(0, 22);
+                    lbAll_Mon.TabIndex = 14;
+                    // 
+                    // lbAll_DongGop_4
+                    // 
+                    lbAll_DongGop = new Label();
+                    lbAll_DongGop.AutoSize = true;
+                    lbAll_DongGop.Location = new Point(769, 134);
+                    lbAll_DongGop.Name = "lbAll_DongGop_4";
+                    lbAll_DongGop.Size = new Size(0, 16);
+                    lbAll_DongGop.TabIndex = 13;
+                    // 
+                    // All_DongGop_4
+                    // 
+                    All_DongGop = new Label();
+                    All_DongGop.AutoSize = true;
+                    All_DongGop.Location = new Point(612, 134);
+                    All_DongGop.Name = "All_DongGop_4";
+                    All_DongGop.Size = new Size(0, 16);
+                    All_DongGop.TabIndex = 12;
+                    // 
+                    // lbAll_Gia_4
+                    // 
+                    lbAll_Gia = new Label();
+                    lbAll_Gia.AutoSize = true;
+                    lbAll_Gia.Location = new Point(374, 87);
+                    lbAll_Gia.Name = "lbAll_Gia_4";
+                    lbAll_Gia.Size = new Size(0, 16);
+                    lbAll_Gia.TabIndex = 11;
+                    // 
+                    // lbAll_DiaChi_4
+                    // 
+                    lbAll_DiaChi = new Label();
+                    lbAll_DiaChi.AutoSize = true;
+                    lbAll_DiaChi.Location = new Point(374, 134);
+                    lbAll_DiaChi.Name = "lbAll_DiaChi_4";
+                    lbAll_DiaChi.Size = new Size(0, 16);
+                    lbAll_DiaChi.TabIndex = 10;
+                    // 
+                    // All_DiaChi_4
+                    // 
+                    All_DiaChi = new Label();
+                    All_DiaChi.AutoSize = true;
+                    All_DiaChi.Location = new Point(230, 134);
+                    All_DiaChi.Name = "All_DiaChi_4";
+                    All_DiaChi.Size = new Size(0, 16);
+                    All_DiaChi.TabIndex = 9;
+                    // 
+                    // All_Gia_4
+                    // 
+                    All_Gia = new Label();
+                    All_Gia.AutoSize = true;
+                    All_Gia.Location = new Point(230, 87);
+                    All_Gia.Name = "All_Gia_4";
+                    All_Gia.Size = new Size(0, 16);
+                    All_Gia.TabIndex = 8;
+                    // 
+                    // pbAll4
+                    // 
+                    pbAll.ImageLocation = "";
+                    pbAll.Location = new Point(3, 3);
+                    pbAll.Name = "pbAll4";
+                    pbAll.Size = new Size(186, 174);
+                    pbAll.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pbAll.TabIndex = 1;
+                    pbAll.TabStop = false;
+
+                    pbAll.ImageLocation = (string)users2[i]["hinh_anh"];
+                    lbAll_Mon.Text = (string)users2[i]["ten_mon_an"];
+                    lbAll_Gia.Text = (string)users2[i]["gia"];
+                    lbAll_DiaChi.Text = (string)users2[i]["dia_chi"];
+                    lbAll_DongGop.Text = (string)users2[i]["nguoi_dong_gop"];
+                    All_Gia.Text = "Giá:";
+                    All_DongGop.Text = "Người đóng góp:";
+                    All_DiaChi.Text = "Địa chỉ:";
+
+                    Panel Panel_Wrap = new Panel();
+                    Panel_Wrap.Controls.Add(lbAll_Mon);
+                    Panel_Wrap.Controls.Add(lbAll_DongGop);
+                    Panel_Wrap.Controls.Add(All_DongGop);
+                    Panel_Wrap.Controls.Add(lbAll_Gia);
+                    Panel_Wrap.Controls.Add(lbAll_DiaChi);
+                    Panel_Wrap.Controls.Add(All_DiaChi);
+                    Panel_Wrap.Controls.Add(All_Gia);
+                    Panel_Wrap.Controls.Add(pbAll);
+                    Panel_Wrap.Location = new Point(6, 6 * (i - 1) + 180 * i);
+                    Panel_Wrap.Name = "panel5";
+                    Panel_Wrap.Size = new Size(950, 180);
+                    Panel_Wrap.TabIndex = i + 10;
+
+                    pnShowMy.Controls.Add(Panel_Wrap);
+                }
+
 
         }
         private void ListDishes_Load(object sender, EventArgs e)
@@ -402,6 +498,11 @@ namespace lab5_5
 
         private void btnGo_Click(object sender, EventArgs e)
         {
+            if (txtGoPage.Text == string.Empty)
+            {
+                MessageBox.Show("Nhập trang cần tới!");
+                return;
+            }
             if (int.Parse(totalCongDong) % 5 == 0)
             {
                 if (int.Parse(txtGoPage.Text) > (int.Parse(totalCongDong) / 5))
@@ -453,18 +554,50 @@ namespace lab5_5
             Show_Invitation form = new Show_Invitation(Client, index_Emails);
             form.ShowDialog();
         }
-        private void CloseForm(object sender, FormClosingEventArgs e)
+
+        private void ListDishes_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn quay lại form login không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            DialogResult resultReturn = MessageBox.Show("Bạn có muốn quay lại form login không?", "Xác nhận", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+
+            if (resultReturn == DialogResult.No)
             {
-                this.Show();
+                Environment.Exit(0);
             }
-            else
+            if (resultReturn == DialogResult.Yes)
             {
-                Application.Exit();
-            }    
+                e.Cancel = false;
+            }
+            if (resultReturn == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+        }
+        private void KeyEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnGo.PerformClick();
         }
 
-       
+        private void KeyLoading(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Right)
+            {
+                btnNext.PerformClick();
+
+            }
+            else if (e.KeyCode == Keys.Left)
+            {
+                btnBack.PerformClick();
+                e.Handled = true;
+            }
+        }
+
+        private void KeyHandle(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left || e.KeyCode == Keys.Right)
+            {
+                e.Handled = true;
+            }
+        }   
     }
 }

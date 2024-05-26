@@ -77,5 +77,14 @@ namespace lab5_5
 
             MessageBox.Show("Đã thêm món thành công");
         }
+
+        private void KeyEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnAdd.PerformClick();
+                e.Handled = true; // Ngăn chặn việc xử lý phím Enter tiếp theo
+            }
+        }
     }
 }

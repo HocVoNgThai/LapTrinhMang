@@ -62,5 +62,12 @@ namespace lab5_5
             listDishes.ShowDialog();
             this.Show();
         }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) 
+                btnLogin.PerformClick();
+
+        }
     }
 }

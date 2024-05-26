@@ -232,9 +232,11 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Font = new Font("Cambria", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            KeyPreview = true;
             MaximizeBox = false;
             Name = "Create";
             Text = "Create";
+            KeyDown += KeyEnter;
             ResumeLayout(false);
             PerformLayout();
         }

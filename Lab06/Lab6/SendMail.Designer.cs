@@ -68,6 +68,7 @@
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(476, 27);
             txtEmail.TabIndex = 3;
+            txtEmail.KeyDown += KeyEnter;
             // 
             // btnAdd
             // 

@@ -165,5 +165,14 @@ namespace lab5_5
                 }
             }
         }
+
+        private void KeyEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSaveAndExit.PerformClick();
+                e.Handled = true;
+            }
+        }
     }
 }

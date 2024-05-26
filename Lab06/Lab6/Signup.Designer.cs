@@ -341,10 +341,12 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Font = new Font("Cambria", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            KeyPreview = true;
             Margin = new Padding(4);
             MaximizeBox = false;
             Name = "Signup";
             Text = "Signup";
+            KeyDown += KeyEnter;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -88,7 +88,7 @@
             // 
             lbSignUp.AutoSize = true;
             lbSignUp.ForeColor = Color.Blue;
-            lbSignUp.Location = new Point(354, 296);
+            lbSignUp.Location = new Point(350, 296);
             lbSignUp.Margin = new Padding(4, 0, 4, 0);
             lbSignUp.Name = "lbSignUp";
             lbSignUp.Size = new Size(67, 21);
@@ -112,6 +112,7 @@
             txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(216, 29);
             txtPassword.TabIndex = 6;
+            txtPassword.KeyDown += txtPassword_KeyDown;
             // 
             // btnLogin
             // 

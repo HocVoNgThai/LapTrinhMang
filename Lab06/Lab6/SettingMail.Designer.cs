@@ -425,10 +425,12 @@
             Controls.Add(groupBox1);
             Controls.Add(label1);
             Font = new Font("Cambria", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            KeyPreview = true;
             MaximizeBox = false;
             Name = "SettingMail";
             Text = "SettingMail";
             FormClosing += CloseForm;
+            KeyDown += KeyEnter;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);

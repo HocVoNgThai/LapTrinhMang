@@ -119,13 +119,14 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Font = new Font("Cambria", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            richTextBox1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             richTextBox1.Location = new Point(0, 271);
             richTextBox1.Margin = new Padding(3, 4, 3, 4);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.Size = new Size(1197, 312);
             richTextBox1.TabIndex = 8;
             richTextBox1.Text = "";
+            richTextBox1.KeyDown += KeyEnter;
             // 
             // Btn_Send
             // 
@@ -145,7 +146,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1198, 670);
+            ClientSize = new Size(1198, 669);
             Controls.Add(Btn_Send);
             Controls.Add(richTextBox1);
             Controls.Add(panel1);

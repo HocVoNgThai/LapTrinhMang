@@ -68,7 +68,7 @@ namespace lab5_5
                 MessageBox.Show("Không thể để trống các mục có dấu sao",
                     "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-            }    
+            }
             HttpRequest http = new HttpRequest();
             var html = "";
             int sexual = 0;
@@ -94,6 +94,15 @@ namespace lab5_5
                 return;
             }
             MessageBox.Show("Đã đăng ký tài khoản thành công");
+        }
+
+        private void KeyEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSubmit.PerformClick();
+                e.Handled = true;
+            }
         }
     }
 }

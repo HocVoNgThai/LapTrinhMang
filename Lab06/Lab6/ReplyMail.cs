@@ -85,5 +85,11 @@ namespace Lab6
             }
             MessageBox.Show("Gửi email thành công");
         }
+
+        private void KeyEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) 
+                Btn_Send.PerformClick();
+        }
     }
 }
