@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{114F84AF-8E06-4D0E-9C60-992EE811471A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Lab3</RootNamespace>
+    <AssemblyName>Lab3</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bai01_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bai01_Client.Designer.cs">
+      <DependentUpon>Bai01_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bai02_Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bai02_Server.Designer.cs">
+      <DependentUpon>Bai02_Server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bai01_Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bai01_Server.Designer.cs">
+      <DependentUpon>Bai01_Server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dieuhuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dieuhuong.Designer.cs">
+      <DependentUpon>Dieuhuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bai01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bai01.Designer.cs">
+      <DependentUpon>Bai01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bai03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bai03.Designer.cs">
+      <DependentUpon>Bai03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bai03_Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bai03_Server.Designer.cs">
+      <DependentUpon>Bai03_Server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bai03_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bai03_Client.Designer.cs">
+      <DependentUpon>Bai03_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bai04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bai04.Designer.cs">
+      <DependentUpon>Bai04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bai04_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bai04_Client.Designer.cs">
+      <DependentUpon>Bai04_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Bai01.resx">
+      <DependentUpon>Bai01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bai01_Client.resx">
+      <DependentUpon>Bai01_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bai01_Server.resx">
+      <DependentUpon>Bai01_Server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bai02_Server.resx">
+      <DependentUpon>Bai02_Server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bai03.resx">
+      <DependentUpon>Bai03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bai03_Client.resx">
+      <DependentUpon>Bai03_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bai03_Server.resx">
+      <DependentUpon>Bai03_Server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bai04.resx">
+      <DependentUpon>Bai04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bai04_Client.resx">
+      <DependentUpon>Bai04_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dieuhuong.resx">
+      <DependentUpon>Dieuhuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0649d50cae396b673228.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

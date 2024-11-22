@@ -1,0 +1,176 @@
+[
+  {
+    "Theater_Index": [
+      1,
+      2,
+      3
+    ],
+    "Theater_Seat": {
+      "0": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "1": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "2": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "Name_Movie": "Đào, phở và piano",
+    "Price_Movie": 45000.0,
+    "Sell_Ticket": 16,
+    "Stock_Ticket": 164,
+    "Ticket_Selling_Rate": 0.355555564,
+    "Revenue": 7290000.0
+  },
+  {
+    "Theater_Index": [
+      2,
+      3
+    ],
+    "Theater_Seat": {
+      "0": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "1": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "Name_Movie": "Mai",
+    "Price_Movie": 100000.0,
+    "Sell_Ticket": 0,
+    "Stock_Ticket": 120,
+    "Ticket_Selling_Rate": 0.0,
+    "Revenue": 1.08E+07
+  },
+  {
+    "Theater_Index": [
+      1
+    ],
+    "Theater_Seat": {
+      "0": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "Name_Movie": "Gặp lại chị bầu",
+    "Price_Movie": 70000.0,
+    "Sell_Ticket": 0,
+    "Stock_Ticket": 60,
+    "Ticket_Selling_Rate": 0.0,
+    "Revenue": 3780000.0
+  },
+  {
+    "Theater_Index": [
+      3
+    ],
+    "Theater_Seat": {
+      "0": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "Name_Movie": "Tarot",
+    "Price_Movie": 90000.0,
+    "Sell_Ticket": 0,
+    "Stock_Ticket": 60,
+    "Ticket_Selling_Rate": 0.0,
+    "Revenue": 4860000.0
+  }
+]

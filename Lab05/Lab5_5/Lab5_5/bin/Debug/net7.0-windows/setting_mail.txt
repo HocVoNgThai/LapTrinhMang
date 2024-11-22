@@ -1,0 +1,8 @@
+{
+  "smtp": "smtp.gmail.com",
+  "port": "465",
+  "nickname": "H\u1ECDc",
+  "email": "accvipth86@gmail.com",
+  "password": "qpwt hshv uies qpmf",
+  "ssl": "True"
+}

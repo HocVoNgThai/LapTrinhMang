@@ -1,0 +1,39 @@
+[
+  {
+    "Chosen_Ticket": [
+      "A2",
+      "A3"
+    ],
+    "Customer_Name": "h",
+    "Name_Movie": "Đào, phở và piano",
+    "Theater": 1,
+    "Bill": 90000.0
+  },
+  {
+    "Chosen_Ticket": [
+      "C2",
+      "C3"
+    ],
+    "Customer_Name": "Hoàng",
+    "Name_Movie": "Đào, phở và piano",
+    "Theater": 1,
+    "Bill": 90000.0
+  },
+  {
+    "Chosen_Ticket": [
+      "A4",
+      "A5"
+    ],
+    "Customer_Name": "Võ Tắc",
+    "Name_Movie": "Đào, phở và piano",
+    "Theater": 3,
+    "Bill": 56250.0
+  },
+  {
+    "Chosen_Ticket": [],
+    "Customer_Name": "Hoàng",
+    "Name_Movie": "Đào, phở và piano",
+    "Theater": 3,
+    "Bill": 0.0
+  }
+]

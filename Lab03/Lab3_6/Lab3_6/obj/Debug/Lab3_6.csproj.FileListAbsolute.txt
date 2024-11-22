@@ -1,0 +1,12 @@
+D:\mạng\lab-project\Lab3_6\Lab3_6\bin\Debug\Lab3_6.exe.config
+D:\mạng\lab-project\Lab3_6\Lab3_6\bin\Debug\Lab3_6.exe
+D:\mạng\lab-project\Lab3_6\Lab3_6\bin\Debug\Lab3_6.pdb
+D:\mạng\lab-project\Lab3_6\Lab3_6\obj\Debug\Lab3_6.csproj.AssemblyReference.cache
+D:\mạng\lab-project\Lab3_6\Lab3_6\obj\Debug\Lab3_6.Menu.resources
+D:\mạng\lab-project\Lab3_6\Lab3_6\obj\Debug\Lab3_6.Properties.Resources.resources
+D:\mạng\lab-project\Lab3_6\Lab3_6\obj\Debug\Lab3_6.csproj.GenerateResource.cache
+D:\mạng\lab-project\Lab3_6\Lab3_6\obj\Debug\Lab3_6.csproj.CoreCompileInputs.cache
+D:\mạng\lab-project\Lab3_6\Lab3_6\obj\Debug\Lab3_6.exe
+D:\mạng\lab-project\Lab3_6\Lab3_6\obj\Debug\Lab3_6.pdb
+D:\mạng\lab-project\Lab3_6\Lab3_6\obj\Debug\Lab3_6.client.resources
+D:\mạng\lab-project\Lab3_6\Lab3_6\obj\Debug\Lab3_6.server.resources
